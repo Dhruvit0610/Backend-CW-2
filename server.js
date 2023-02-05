@@ -5,9 +5,9 @@ var app = express();
 app.set('json spaces', 3);
 const cors = require('cors');
 app.use(cors());
-const routerApi= require('./routes/apiRouter');
+// const routerApi= require('./routes/apiRouter');
 // app.use(express.static("public"));
-app.use('/',routerApi);
+// app.use('/',routerApi);
 const port = process.env.PORT ? process.env.PORT : 3030;
 
 // Milddleware function
