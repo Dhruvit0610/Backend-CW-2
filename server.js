@@ -8,6 +8,7 @@ app.use(cors());
 const routerApi= require('./routes/apiRouter');
 // app.use(express.static("public"));
 app.use('/',routerApi);
+const port = process.env.PORT ? process.env.PORT : 3030;
 
 // Milddleware function
 app.use(morgan("short"));
@@ -111,6 +112,10 @@ app.use(function(req,res){
 
 
 
-app.listen(3030,function(){
-    console.log("App started on port 3030");
-});
+// app.listen(3030,function(){
+//     console.log("App started on port 3030");
+// });
+
+app.listen(port, function () {
+    console.log(`App started http://localhost:${port}/`);
+  });
